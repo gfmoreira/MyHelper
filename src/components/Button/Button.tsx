@@ -26,9 +26,11 @@ const Button = (props: ButtonProps) => {
       <button
         disabled={disabled}
         onClick={handleClick}
-        className={`bg-blue-500 ${
-          !actived && "hover:bg-blue-700"
-        } text-white font-bold py-2 px-4 border border-blue-700 rounded ${className}`}
+        className={`${
+          !actived ? "bg-blue-500" : "bg-blue-700"
+        } hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded ${
+          className || ""
+        }`}
         data-cy={dataCy}
         data-testid={dataTestId}
       >

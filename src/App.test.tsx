@@ -1,9 +1,17 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import React from "react";
+import "@testing-library/jest-dom";
+import { render } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe("App component tests", () => {
+  it("renders App component correctly", () => {
+    const { getByTestId } = render(<App />);
+    const component = getByTestId("App");
+
+    // For toBeInTheDocument() to be a function
+    // and be able to perform validation, it is
+    // necessary to import "@testing-library/jest-dom"
+
+    expect(component).toBeInTheDocument();
+  });
 });

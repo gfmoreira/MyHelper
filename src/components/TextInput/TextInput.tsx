@@ -25,7 +25,7 @@ const TextInput = (props: TextInputProps) => {
         {title} {required ? <span>*</span> : null}
       </label>
       <input
-        data-testid="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+        data-testid="textInput"
         maxLength={maxLength}
         type={type !== "alphanumeric" ? type : "text"}
         pattern={type == "alphanumeric" ? "^[a-zA-Z0-9]*$" : ""}
@@ -42,7 +42,7 @@ const TextInput = (props: TextInputProps) => {
         }}
       />
       <div
-        data-testid={`error-textInput`}
+        data-testid="error-textInput"
         className="text-red-500 text-xs italic"
       >
         {error && "This is a required field"}

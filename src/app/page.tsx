@@ -1,5 +1,6 @@
 "use client";
 import Button from "@/components/Button/Button";
+import TextInput from "@/components/TextInput/TextInput";
 import Image from "next/image";
 
 export default function Home() {
@@ -12,6 +13,8 @@ export default function Home() {
       >
         Button Test
       </Button>
+
+      <TextInput title="Text Input" type="alphanumeric" />
     </main>
   );
 }
